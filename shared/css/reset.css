@@ -1,0 +1,1711 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+目次
+	（1）初期設定リセット
+	（2）font等の初期設定
+	（3）共通クラス
+---------------------------------------*/
+
+
+/*------------------------------------------------------------
+/* （1）初期設定リセット
+------------------------------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+div,
+section,
+ul {
+    transition-property: width, height, left, top, bottom, right, margin, padding, font-size;
+    transition-duration: 0.5s;
+}
+
+/* 斜体字矯正---*/
+address,
+em {
+    font-style: normal;
+}
+
+/* 太字---*/
+th {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    text-align: left;
+}
+
+/* 横罫線消去---*/
+legend {
+    display: none;
+}
+
+/* 枠線消去---*/
+img,
+fieldset {
+    border: 0;
+}
+
+/* 画像の配置（ベースラインからボトムへ）---*/
+img {
+    vertical-align: bottom;
+}
+
+/* リスト---*/
+li {
+    list-style-type: none;
+}
+
+
+/*------------------------------------------------------------
+/* （2）font等の初期設定
+------------------------------------------------------------*/
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    background: #FFF;
+    color: #333;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+}
+
+* html body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+/* for lte ie6 */
+
+*:first-child + html body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for ie7 */
+
+html >
+
+/**/
+body {
+    font-size: 15px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for ie8 */
+
+html:not(:target) body {
+    font-size: 14px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for modern browser not ie8 */
+
+
+/* フォントサイズ統一---*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+
+
+
+
+
+h2 {
+    font-size: 100%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+h4 {
+    font-size: 100%;
+}
+
+
+/*------------------------------------------------------------
+/* （3）共通クラス
+------------------------------------------------------------*/
+
+/* A Style */
+/*--------------------------------------*/
+/*
+a:link {
+    text-decoration: none;
+    color: #333;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0071bc;
+}
+*/
+
+/* font Class */
+/*--------------------------------------*/
+.color_red {
+    color: #F33;
+}
+
+.color_pink {
+    color: #ed8c96;
+}
+
+.color_blue {
+    color: #00408f;
+}
+
+.color_green {
+    color: #479f9d;
+}
+
+.color_ore {
+    color: #FF8327;
+}
+
+.color_yellow {
+    color: #FFEB8B;
+}
+
+.color_beige {
+    color: #dac58b;
+}
+
+.color_brown {
+    color: #9b8052;
+}
+
+.color_navy {
+    color: #1F2774;
+}
+
+.color_black {
+    color: #3e3a39;
+}
+
+.ls_0 {
+    letter-spacing: 0;
+}
+
+.ls_1 {
+    letter-spacing: 1px;
+}
+
+.big {
+    font-size: 140%;
+    font-weight: 500;
+}
+
+.big_s {
+    font-size: 110%;
+    font-weight: 500;
+    line-height: 1.5em;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.icon_mr {
+    padding-left: 0.75em;
+}
+
+.small_txt {
+    font-size: 80%;
+    line-height: 1.8em;
+}
+
+.medium_txt {
+    font-size: 90%;
+    line-height: 1.8em;
+}
+
+.wt300 {
+    font-weight: 300;
+}
+
+.strongs {
+    background-color: #f1a7b6;
+    padding: 8px 20px;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 120%;
+    position: absolute;
+    top: 7%;
+    left: 23%;
+}
+
+.weight300 {
+    font-weight: 300;
+}
+
+
+/* clearfix Class */
+/*--------------------------------------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    min-height: 1px;
+}
+
+
+/* margin Class */
+/*--------------------------------------*/
+.mt00 {
+    margin-top: 0px !important;
+}
+
+.mt01 {
+    margin-top: 1px;
+}
+
+.mt02 {
+    margin-top: 2px;
+}
+
+.mt03 {
+    margin-top: 3px;
+}
+
+.mt04 {
+    margin-top: 4px;
+}
+
+.mt05 {
+    margin-top: 5px;
+}
+
+.mt06 {
+    margin-top: 6px;
+}
+
+.mt07 {
+    margin-top: 7px;
+}
+
+.mt08 {
+    margin-top: 8px;
+}
+
+.mt09 {
+    margin-top: 9px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt45 {
+    margin-top: 45px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+.mt70 {
+    margin-top: 70px;
+}
+
+.mt80 {
+    margin-top: 80px;
+}
+
+.mt90 {
+    margin-top: 90px;
+}
+
+.mt100 {
+    margin-top: 100px;
+}
+
+.mt110 {
+    margin-top: 110px;
+}
+
+.mt120 {
+    margin-top: 120px;
+}
+
+.mr00 {
+    margin-right: 0px !important;
+}
+
+.mr01 {
+    margin-right: 1px;
+}
+
+.mr02 {
+    margin-right: 2px;
+}
+
+.mr03 {
+    margin-right: 3px;
+}
+
+.mr04 {
+    margin-right: 4px;
+}
+
+.mr05 {
+    margin-right: 5px;
+}
+
+.mr06 {
+    margin-right: 6px;
+}
+
+.mr07 {
+    margin-right: 7px;
+}
+
+.mr08 {
+    margin-right: 8px;
+}
+
+.mr09 {
+    margin-right: 9px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr25 {
+    margin-right: 25px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mr35 {
+    margin-right: 35px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}
+
+.mr45 {
+    margin-right: 45px;
+}
+
+.mr50 {
+    margin-right: 50px;
+}
+
+.mr60 {
+    margin-right: 60px;
+}
+
+.mr70 {
+    margin-right: 70px;
+}
+
+.mr80 {
+    margin-right: 80px;
+}
+
+.mr90 {
+    margin-right: 90px;
+}
+
+.mr100 {
+    margin-right: 100px;
+}
+
+.mb00 {
+    margin-bottom: 0 !important;
+}
+
+.mb01 {
+    margin-bottom: 1px;
+}
+
+.mb02 {
+    margin-bottom: 2px;
+}
+
+.mb03 {
+    margin-bottom: 3px;
+}
+
+.mb04 {
+    margin-bottom: 4px;
+}
+
+.mb05 {
+    margin-bottom: 5px;
+}
+
+.mb06 {
+    margin-bottom: 6px;
+}
+
+.mb07 {
+    margin-bottom: 7px;
+}
+
+.mb08 {
+    margin-bottom: 8px;
+}
+
+.mb09 {
+    margin-bottom: 9px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb35 {
+    margin-bottom: 35px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb45 {
+    margin-bottom: 45px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+.mb70 {
+    margin-bottom: 70px;
+}
+
+.mb80 {
+    margin-bottom: 80px;
+}
+
+.mb90 {
+    margin-bottom: 90px;
+}
+
+.mb100 {
+    margin-bottom: 100px;
+}
+
+.ml00 {
+    margin-left: 0 !important;
+}
+
+.ml01 {
+    margin-left: 1px;
+}
+
+.ml02 {
+    margin-left: 2px;
+}
+
+.ml03 {
+    margin-left: 3px;
+}
+
+.ml04 {
+    margin-left: 4px;
+}
+
+.ml05 {
+    margin-left: 5px;
+}
+
+.ml06 {
+    margin-left: 6px;
+}
+
+.ml07 {
+    margin-left: 7px;
+}
+
+.ml08 {
+    margin-left: 8px;
+}
+
+.ml09 {
+    margin-left: 9px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml12 {
+    margin-left: 12px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml25 {
+    margin-left: 25px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.ml35 {
+    margin-left: 35px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.ml45 {
+    margin-left: 45px;
+}
+
+.ml50 {
+    margin-left: 50px;
+}
+
+.ml60 {
+    margin-left: 60px;
+}
+
+.ml70 {
+    margin-left: 70px;
+}
+
+.ml80 {
+    margin-left: 80px;
+}
+
+.ml90 {
+    margin-left: 90px;
+}
+
+.ml100 {
+    margin-left: 100px;
+}
+
+.ml140 {
+    margin-left: 140px;
+}
+
+.ml160 {
+    margin-left: 160px;
+}
+
+.ma10 {
+    margin: 10px;
+}
+
+.ma15 {
+    margin: 15px;
+}
+
+.ma_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* padding Class */
+/*--------------------------------------*/
+.pt00 {
+    padding-top: 0 !important;
+}
+
+.pt01 {
+    padding-top: 1px;
+}
+
+.pt02 {
+    padding-top: 2px;
+}
+
+.pt03 {
+    padding-top: 3px;
+}
+
+.pt04 {
+    padding-top: 4px;
+}
+
+.pt05 {
+    padding-top: 5px;
+}
+
+.pt06 {
+    padding-top: 6px;
+}
+
+.pt07 {
+    padding-top: 7px;
+}
+
+.pt08 {
+    padding-top: 8px;
+}
+
+.pt09 {
+    padding-top: 9px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt25 {
+    padding-top: 25px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pt35 {
+    padding-top: 35px;
+}
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.pt45 {
+    padding-top: 45px;
+}
+
+.pt50 {
+    padding-top: 50px;
+}
+
+.pt60 {
+    padding-top: 60px;
+}
+
+.pt70 {
+    padding-top: 70px;
+}
+
+.pt80 {
+    padding-top: 80px;
+}
+
+.pt90 {
+    padding-top: 90px;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+.pt120 {
+    padding-top: 120px;
+}
+
+.pr00 {
+    padding-right: 0 !important;
+}
+
+.pr01 {
+    padding-right: 1px;
+}
+
+.pr02 {
+    padding-right: 2px;
+}
+
+.pr03 {
+    padding-right: 3px;
+}
+
+.pr04 {
+    padding-right: 4px;
+}
+
+.pr05 {
+    padding-right: 5px;
+}
+
+.pr06 {
+    padding-right: 6px;
+}
+
+.pr07 {
+    padding-right: 7px;
+}
+
+.pr08 {
+    padding-right: 8px;
+}
+
+.pr09 {
+    padding-right: 9px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pr25 {
+    padding-right: 25px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pr35 {
+    padding-right: 35px;
+}
+
+.pr40 {
+    padding-right: 40px !important;
+}
+
+.pr45 {
+    padding-right: 45px;
+}
+
+.pr50 {
+    padding-right: 50px;
+}
+
+.pr60 {
+    padding-right: 60px;
+}
+
+.pr70 {
+    padding-right: 70px;
+}
+
+.pr80 {
+    padding-right: 80px;
+}
+
+.pr90 {
+    padding-right: 90px;
+}
+
+.pr100 {
+    padding-right: 100px;
+}
+
+.pb00 {
+    padding-bottom: 0 !important;
+}
+
+.pb01 {
+    padding-bottom: 1px;
+}
+
+.pb02 {
+    padding-bottom: 2px;
+}
+
+.pb03 {
+    padding-bottom: 3px;
+}
+
+.pb04 {
+    padding-bottom: 4px;
+}
+
+.pb05 {
+    padding-bottom: 5px;
+}
+
+.pb06 {
+    padding-bottom: 6px;
+}
+
+.pb07 {
+    padding-bottom: 7px;
+}
+
+.pb08 {
+    padding-bottom: 8px;
+}
+
+.pb09 {
+    padding-bottom: 9px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.pb35 {
+    padding-bottom: 35px;
+}
+
+.pb40 {
+    padding-bottom: 40px;
+}
+
+.pb45 {
+    padding-bottom: 45px;
+}
+
+.pb50 {
+    padding-bottom: 50px;
+}
+
+.pb60 {
+    padding-bottom: 60px;
+}
+
+.pb70 {
+    padding-bottom: 70px;
+}
+
+.pb80 {
+    padding-bottom: 80px;
+}
+
+.pb90 {
+    padding-bottom: 90px;
+}
+
+.pb100 {
+    padding-bottom: 100px;
+}
+
+.pl00 {
+    padding-left: 0 !important;
+}
+
+.pl01 {
+    padding-left: 1px;
+}
+
+.pl02 {
+    padding-left: 2px;
+}
+
+.pl03 {
+    padding-left: 3px;
+}
+
+.pl04 {
+    padding-left: 4px;
+}
+
+.pl05 {
+    padding-left: 5px;
+}
+
+.pl06 {
+    padding-left: 6px;
+}
+
+.pl07 {
+    padding-left: 7px;
+}
+
+.pl08 {
+    padding-left: 8px;
+}
+
+.pl09 {
+    padding-left: 9px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl25 {
+    padding-left: 25px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pl35 {
+    padding-left: 35px;
+}
+
+.pl40 {
+    padding-left: 40px;
+}
+
+.pl45 {
+    padding-left: 45px;
+}
+
+.pl50 {
+    padding-left: 50px;
+}
+
+.pl60 {
+    padding-left: 60px;
+}
+
+.pl70 {
+    padding-left: 70px;
+}
+
+.pl80 {
+    padding-left: 80px;
+}
+
+.pl90 {
+    padding-left: 90px;
+}
+
+.pl100 {
+    padding-left: 100px;
+}
+
+.pa01 {
+    padding: 1px;
+}
+
+.pa02 {
+    padding: 2px;
+}
+
+.pa03 {
+    padding: 3px;
+}
+
+.pa04 {
+    padding: 4px;
+}
+
+.pa05 {
+    padding: 5px;
+}
+
+.pa10 {
+    padding: 10px;
+}
+
+.pa15 {
+    padding: 15px;
+}
+
+
+/* float Class */
+/*--------------------------------------*/
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fr10 {
+    float: right;
+    margin-left: 10px;
+}
+
+.fr15 {
+    float: right;
+    margin-left: 15px;
+}
+
+.fr30 {
+    float: right;
+    margin-left: 15px;
+}
+
+.fl10 {
+    float: left;
+    margin-right: 10px;
+}
+
+.fl15 {
+    float: left;
+    margin-right: 15px;
+}
+
+.fl30 {
+    float: left;
+    margin-right: 30px;
+}
+
+
+/* width Class */
+/*--------------------------------------*/
+.w100 {
+    width: 100%;
+}
+
+
+/* fixed Class */
+/*--------------------------------------*/
+.fixed {
+    position: fixed;
+    z-index: 999999999;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* align Class */
+/*--------------------------------------*/
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* form */
+/*--------------------------------------*/
+form table {
+    margin: 0 auto;
+}
+
+form table tr {
+    margin-bottom: 30px;
+}
+
+form table th {
+    width: 30%;
+    padding: 10px 100px 30px 0;
+    vertical-align: top;
+}
+
+.form table td {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    font-size: 1em;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+* html input,
+select,
+textarea {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for lte ie6 */
+
+*:first-child + html input,
+select,
+textarea {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for ie7 */
+
+html >
+
+/**/
+input,
+select,
+textarea {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for ie8 */
+
+html:not(:target) input,
+select,
+textarea {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* for modern browser not ie8 */
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: none transparent;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: content-box;
+    width: 200px;
+    border: solid 1px #333;
+    background-color: #ffffff;
+}
+
+textarea,
+input,
+button {
+    position: relative;
+    border: none;
+    outline: 0;
+    font-size: 1em;
+    position: relative;
+    padding: 7px 10px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+select,
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"] {
+    padding: 10px 5px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid #1b2538;
+    border-radius: 10px;
+}
+
+select:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border: 1px solid #da3c41;
+    outline: none;
+    box-shadow: 0 0 5px 1px rgba(218, 60, 65, .5);
+}
+
+table th .required {
+    display: inline-block;
+    padding: 0px 6px;
+    margin-left: 10px;
+    color: #ef380a;
+    border: solid 1px #ef380a;
+    font-size: 14px;
+}
+
+table .f_name {
+    display: flex;
+}
+
+table .f_name input:nth-child(1) {
+    margin-right: 10px;
+}
+
+.tex_area {
+    border: solid 1px #000;
+    width: 100%;
+    height: 200px;
+}
+
+.select-wrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.select-wrap:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e61c";
+    position: absolute;
+    z-index: 1;
+    right: 7px;
+    top: 12px;
+    font-size: 160%;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border: solid 1px #333;
+    outline: 0;
+    font-size: 1em;
+    position: relative;
+    background-color: #fff;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.select:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e61c";
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+    font-size: 200%;
+}
+
+
+.btn_contact {
+    padding: 14px 24px 14px 24px;
+    background-color: #333;
+    border: 2px solid #ccc;
+    color: #fff;
+    font-weight: 300;
+    font-size: 100%;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.btn_contact:hover {
+    opacity: 0.6;
+}
+
+.iopt_label {
+    padding: 10px;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+}
+
+.inline {
+    display: inline-block;
+    position: relative;
+}
+
+.tex_ss {
+    min-width: 150px;
+    margin: 0 0px;
+}
+
+.tex_s {
+    width: 35%;
+    margin: 0 10px;
+}
+
+.tex_m {
+    width: 100%;
+}
+
+.tex_l {
+    width: 100%;
+    height: 200px;
+}
+
+.tel_focus {
+    color: #969696;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* ラジオ、チェックボタンcss */
+/*--------------------------------------*/
+
+/*Radio Check*/
+label.radio,
+label.radio_text,
+label.checkbox,
+label.checkbox_text {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+label.radio {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #666666;
+    border-radius: 100%;
+}
+
+label.radio_text {
+    min-height: calc(18px + 5px);
+    margin-right: calc(18px + 5px);
+    padding-left: calc(18px + 5px);
+    line-height: calc(18px + 5px);
+}
+
+label.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B3B3B3;
+    background: #fff;
+}
+
+label.checkbox_text {
+    padding-left: calc(20px + 5px);
+    padding-right: 15px;
+    line-height: 20px;
+}
+
+/** before after **/
+label.radio:before,
+label.radio_text:before,
+label.checkbox_text:before,
+label.checkbox:after,
+label.radio_text:after,
+label.checkbox_text:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+}
+
+label.radio:before,
+label.radio_text:before {
+    border-radius: 100%;
+}
+
+label.radio:before,
+label.checkbox:after {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+label.checkbox:after,
+label.checkbox_text:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    border-right: 3px solid #DD6655;
+    border-bottom: 3px solid #DD6655;
+    top: calc(50% - (((17px / 12) * 5) / 2));
+    display: block;
+    margin-top: calc(((17px / 12) * 5) * -1);
+    width: calc(((17px / 12) * 5));
+    height: 17px;
+    z-index: 1;
+}
+
+label.radio_text:before,
+label.radio_text:after {
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+label.radio:before {
+    display: block;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    background-color: #DD6655;
+}
+
+label.radio_text:before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #666666;
+    left: 0px;
+    z-index: 3;
+}
+
+label.checkbox_text:before {
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+label.radio_text:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    left: calc(((18px/2) - (10px) / 2));
+    background-color: #DD6655;
+    z-index: 1;
+}
+
+label.checkbox_text:after {
+    left: calc((20px / 2) - (((17px / 12) * 5) / 2));
+}
+
+/** input **/
+label.radio input[type="radio"],
+label.radio_text input[type="radio"],
+label.checkbox input[type="checkbox"],
+label.checkbox_text input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    z-index: 2;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+}
+
+label.radio input[type="radio"],
+label.radio_text input[type="radio"] {
+    left: calc(18px * -1);
+    width: 18px;
+    height: 18px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 100%;
+}
+
+label.checkbox input[type="checkbox"],
+label.checkbox_text input[type="checkbox"] {
+    left: calc(20px * -1);
+    padding: 0;
+}
+
+label.radio input[type="radio"] {
+    display: block;
+    box-shadow: 18px 0px #FFF;
+}
+
+label.radio_text input[type="radio"] {
+    box-shadow: 18px 0px #FFF;
+}
+
+label.checkbox input[type="checkbox"] {
+    box-shadow: 20px 0px #FFF;
+}
+
+label.checkbox_text input[type="checkbox"] {
+    display: block;
+    box-shadow: 20px 0px #FFF;
+}
+
+/** checked forcus */
+label.checkbox_text input[type="checkbox"]:checked,
+label.checkbox input[type="checkbox"]:checked,
+label.radio_text input[type="radio"]:checked,
+label.radio input[type="radio"]:checked {
+    box-shadow: none;
+}
+
+label.checkbox_text input[type="checkbox"]:checked:focus,
+label.checkbox input[type="checkbox"]:checked:focus {
+    opacity: 0.1;
+}
+
+label.radio_text input[type="radio"]:focus,
+label.radio input[type="radio"]:focus {
+    opacity: 0.2;
+}
+
+label.checkbox_text input[type="checkbox"]:checked:focus {
+    box-shadow: 20px 0px #666;
+}
+
+label.checkbox_text input[type="checkbox"]:focus {
+    box-shadow: 20px 0px #EEE;
+}
+
+label.checkbox input[type="checkbox"]:checked:focus {
+    box-shadow: 20px 0px #666;
+}
+
+label.checkbox input[type="checkbox"]:focus {
+    box-shadow: 20px 0px #EEE;
+}
+
+label.radio_text input[type="radio"]:focus {
+    box-shadow: 18px 0px #FFF;
+}
+
+label.radio input[type="radio"]:focus {
+    box-shadow: 18px 0px #FFF;
+}

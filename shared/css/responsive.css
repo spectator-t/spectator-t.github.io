@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 896px) {
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    footer .inner {
+        flex-direction: column;
+    }
+
+    .footer_nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+        line-height: 3em;
+    }
+
+    .footer_nav li {
+        margin: 0;
+    }
+
+    .content_box {
+        max-width: auto;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .works {
+        margin: 85px auto 0;
+        padding: 0 30px;
+        background: #EFEFEF;
+    }
+
+    .content_works_area {
+        justify-content: center;
+    }
+
+    .content_works_area img {
+        width: 90%;
+    }
+
+    .about .text_box {
+        margin: 50px 0 0 50px;
+        text-align: left;
+    }
+
+    .graphicdesign_img_area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .graphicdesign_list_info {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .jobs {
+        /*        justify-content: space-around;*/
+    }
+
+    .jobs dl {
+        margin: 0 auto;
+    }
+
+}
+
+
+/* スマホ用 */
+@media screen and (max-width: 647px) {
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+
+    .section .article .form table th p {
+        line-height: 1.8em;
+        display: inline-block;
+    }
+
+    footer .inner {
+        flex-direction: column;
+    }
+
+    .footer_nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+        line-height: 3em;
+    }
+
+    .footer_nav li {
+        margin: 0;
+    }
+
+    .index_mainvisual {
+        height: 450px;
+        padding: 230px 0 40px;
+    }
+
+    .sub_mainvisual {
+        height: auto;
+        margin-top: 180px;
+        padding: 0 0 40px;
+    }
+
+    .scroll-line {
+        top: 350px;
+    }
+
+    .content_box {
+        width: auto;
+        padding: 0 30px;
+        margin: 50px 0 100px;
+    }
+
+    .concept .text_box {
+        margin: 50px 0 0 25px;
+    }
+
+    .about .text_box {
+        margin: 50px 30px 0 0;
+        text-align: left;
+    }
+
+    .content_skill_box {
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    .content_skill {
+        margin-top: 50px;
+    }
+
+    .tool_name,
+    .skill_name {
+        flex-direction: column;
+    }
+
+    .works_box {
+        width: auto;
+        margin: 0 auto;
+        padding: 50px 30px;
+    }
+
+    .content_works_area {
+/*        flex-direction: column;*/
+    }
+
+    .content_works_area li {
+        text-align: center;
+    }
+
+    .filter {
+        flex-wrap: wrap;
+    }
+
+    .filter a {
+        margin-bottom: 20px;
+    }
+
+    .jobs {
+        justify-content: space-between;
+    }
+
+    .jobs dl {
+        width: 140px;
+        margin: 0 5px 30px 0;
+    }
+
+    .jobs dd {
+        text-align: left;
+    }
+
+    .jobs img {
+        width: 140px;
+    }
+
+    picture img {
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+
+}
