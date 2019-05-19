@@ -395,6 +395,10 @@ header {
     text-align: center;
 }
 
+.content_skill_cap {
+    margin-top: 5px;
+}
+
 .content_skill_box {
     display: flex;
     justify-content: space-around;
