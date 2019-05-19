@@ -56,8 +56,12 @@
         justify-content: space-around;
     }
 
+    .graphicdesign_img_area img {
+        width: 300px;
+    }
+
     .graphicdesign_list_info {
-        width: 55%;
+        width: auto;
         margin: 0 auto;
     }
 
@@ -155,7 +159,7 @@
     }
 
     .content_works_area {
-/*        flex-direction: column;*/
+        /*        flex-direction: column;*/
     }
 
     .content_works_area li {
@@ -190,12 +194,6 @@
     picture img {
         width: 100%;
     }
-
-
-}
-
-
-
 
 
 }
