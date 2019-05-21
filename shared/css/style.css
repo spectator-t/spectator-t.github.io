@@ -798,6 +798,15 @@ h1.logo {
     margin-bottom: 0;
 }
 
+.mail_area {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.mail_area dd {
+    margin-top: 10px;
+}
+
 
 
 /*============================================================================
