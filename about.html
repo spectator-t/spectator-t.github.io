@@ -46,11 +46,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75654519-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-75654519-2');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-75654519-2');
+
+    </script>
 
 
     <!-- Googleアナリティクスここまで -->
@@ -113,20 +117,34 @@
 
         <section class="about_area in">
             <div class="content_box">
-                <picture class="about_img">
-                    <source media="(min-width: 414px)" srcset="shared/images/web_suitoya_img@2x.png" />
-                    <img src="shared/images/web_sutoya_img_sp@2x.png" alt="酔灯屋">
-                </picture>
+                <div class="about_img">
+                    <picture>
+                        <source media="(min-width: 414px)" srcset="shared/images/about_img.png" />
+                        <img src="shared/images/about_img_sp.png" alt="酔灯屋">
+                    </picture>
+                </div>
                 <h2 class="about_ttl">野田貴史<br>
-                    <span>takashi noda</span></h2>
-                <div class="about_txt_area">
-                    <p>テキテキテキテキテキテキテキテキテキテキテキテキテキテキテキ</p>
-                    <p>テキテキテキテキテキテキテキテキテキテキテキテキテキテキテキ</p>
-                    <p>テキテキテキテキテキテキテキテキテキテキテキテキテキテキテキ</p>
-                    <p>テキテキテキテキテキテキテキテキテキテキテキテキテキテキテキ</p>
+                    <span>takashi noda</span><br>
+                    <span>1984.3.1.</span></h2>
+
+                <ul class="about_sns_area">
+                    <li><a href="https://www.facebook.com/spectator.takashi" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/spectator_0301" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/spectator0301/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/spectator-t" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+
+                <div class="about_txt_area item">
+                    <p>
+                        2011年よりデザイナーとしてのキャリアをスタートしました。<br class="pc">
+                        北九州市のデザイン事務所でグラフィックデザイナーとして勤務後、<br class="pc">
+                        ウェブ業界に飛び込みました。</p>
+
+                    <p>趣味は写真、バイク、シルクスクリーンです。</p>
                 </div>
 
-                <div class="about_career_area">
+                <div class="about_career_area item">
+                    <h3 class="carrer_ttl">経歴</h3>
                     <dl>
                         <dt>
                             <strong>2002年</strong>
@@ -136,17 +154,36 @@
                         </dd>
                     </dl>
                     <dl>
-                        <dt>
-                            <strong>2006年</strong>
-                        </dt>
+                        <dt><strong>2009年</strong></dt>
                         <dd>
-                            <p></p>
+                            <p>工場での仕事を辞めて、アクセサリーショップで働いたことをきっかけに、物作りの楽しさや作家さんに出会い、漠然とこれから先にやりたいことについて考えるようになりました。</p>
+                            <p>そんな時にデザイナーという職業を知り、この仕事ならどんなジャンルの人のサポートができると思い、デザイナーになることを決意。</p>
+                            <p>デザイン専門学校の学費を貯めるためにアクセサリーショップを辞め、約一年半がむしゃらにイベント会社でアルバイトとして働きました。
+                                4トントラックで日本全国を回り、毎日ヘトヘトになったあの頃は今でも忘れられません。
+                            </p>
                         </dd>
                     </dl>
                     <dl>
                         <dt><strong>2010年</strong></dt>
                         <dd>
-                            <p></p>
+                            <p>福岡にあるデザイン専門学校に入学。<br class="pc">
+                                アルバイトに課題にと忙しく過ごしました。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>2011年</strong></dt>
+                        <dd>
+                            <p>専門学校を卒業後、広告制作会社に就職。<br class="pc">
+                                グラフィックデザイナーとして厳しい先輩に揉まれながらデザインの基礎を学びました。<br class="pc">
+                                いわゆる徹夜も珍しくないようなハードな毎日ではありましたが、デザイナーとして仕事をしているのがとても楽しくもありました。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>2015年</strong></dt>
+                        <dd>
+                            <p>仕事の幅を広げるため、ウェブデザイナーになることを決め退職し、<br clas="pc">
+                                職業訓練校に通学後、ウェブ制作会社に就職。<br clas="pc">
+                                複数の会社でウェブデザイナーとして勤務し、現在に至ります。</p>
                         </dd>
                     </dl>
                 </div>
@@ -185,7 +222,7 @@
             scale: 1.0,
             delay: 100,
             opacity: 0,
-            viewFactor: 0.1,
+            viewFactor: 0.2,
         });
         ScrollReveal().reveal('.in'),
             ScrollReveal().reveal('.item', {
